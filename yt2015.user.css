@@ -1,0 +1,67 @@
+/* ==UserStyle==
+@name           Pre-2015 Youtube Video Player
+@namespace      github.com/openstyles/stylus
+@version        1.0.0
+@description    Get the video player UI from before 2015 back. It also restores the old Youtube logo.
+@author         Roly
+==/UserStyle== */
+
+@-moz-document domain("youtube.com") {
+    /*Background*/
+    .ytp-gradient-top, .ytp-gradient-bottom {
+        background-image: none;
+        background-color: #1B1B1B;
+    }
+    .ytp-chrome-top, .ytp-chrome-bottom {
+        background-color: #1B1B1B;
+        height: 27px;
+    }
+    .ytp-gradient-top, .ytp-gradient-bottom {
+        display: none;
+    }
+    .html5-video-player {
+        font-family: "Arial", sans-serif;
+        font-size: 9px;
+    }
+    /*Progress Bar*/
+    .ytp-chrome-bottom {
+        width: 100% !important;
+        left: 0px !important;
+    }
+    .html5-progress-list, .ytp-progress-list, .video-ads .html5-progress-list.html5-ad-progress-list, .video-ads .ytp-progress-list.ytp-ad-progress-list {
+        height: 10px !important;
+    }
+    .ytp-swatch-background-color {
+        background-color: #D7131F;
+    }
+    .html5-scrubber-button, .ytp-scrubber-button {
+        background: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAOwgAADsIBFShKgAAAABl0RVh0U29mdHdhcmUAcGFpbnQubmV0IDQuMC4yMfEgaZUAAADTSURBVDhPzZM5DsMgEEUpU+RAKX2oFD4SBZKPgqhSIpmKMlKUJpGc/wlgwLIVu8pIz+NhFrZBlOK9PzvnejCM4+gStDlOfwxdCgI6YMG0Af1dTJmFg0XQvfgvCeNY0Qv6ElPzssPMcD6oN3hSI+5mrT0Rzs4907k2c0tayZWwAA+oCjLGTEqpDO02BjBvEKgCXTuZJKXM0G5jmEf+oACMxRlorUNSgnYbA75ngM+hWwDM66s+AOGef8AyL7c2BvZ04ht6tZ2PvYUkcTvHXiNlfwEhPsfU8zaGEHdfAAAAAElFTkSuQmCC");
+        width: 16px;
+    }
+    /*Buttons*/
+    .ytp-exp-bigger-button .ytp-chrome-controls .ytp-button, .ytp-exp-bigger-button .ytp-replay-button {
+        filter: brightness(0.5);
+        background-size: cover;
+        width: 45px;
+        margin:0px -7px;
+    }
+    .ytp-svg-shadow {
+        stroke: #000;
+        stroke-opacity: 1;
+        stroke-width: 1.5px;
+        fill: none;
+    }
+    
+    /*Youtube Logo*/
+    #logo-red-icon-container, #logo-icon-container {
+        background-size: 80px;
+        content:url("https://roly.neocities.org/assets/youtube2012.png");
+        overflow:visible;
+    }
+
+    #logo-icon-container.ytd-topbar-logo-renderer {
+        width:80px;
+        height:35px;
+    }
+    
+}
